@@ -1,0 +1,30 @@
+#header {
+  background-color: $fcc_green;
+  border-radius: 10px;
+  position: relative;
+  z-index: 999;
+  #siteHeading {
+    font-family: 'Lobster', cursive;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-size: 4rem;
+    margin: 0;
+    padding-bottom: 40px;
+  }
+  #fcclogo {
+    width: 200px;
+    padding: 10px 0 0 10px;
+  }
+}
+
+#links {
+  margin-top: 1rem;
+  text-align: center;
+  clear: both;
+  a {
+    margin: 0 1rem;
+	  font-family: inherit;
+	  color: inherit;
+	  text-decoration: none;
+  }
+}

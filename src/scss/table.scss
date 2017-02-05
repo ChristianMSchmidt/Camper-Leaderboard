@@ -1,0 +1,59 @@
+table {
+  $defaultSize: 50px;
+  
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: $defaultSize 0 $defaultSize*6 fade-out($fcc_green, 0.8), 
+             -($defaultSize) 0 $defaultSize*6 fade-out($fcc_green, 0.8);
+  th {
+    padding: $defaultSize/5 $defaultSize/2;
+    &#recentHeading, 
+    &#alltimeHeading {
+      cursor: pointer;
+      position: relative; /*Needed for position: absolute on div */
+    }
+    &.active {
+      color: rgba(255, 255, 255, 1);
+    }
+    div {
+      background-color: $fcc_green;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      border-radius: 0 0 15px 15px;
+      @include transition(0.5s);
+      &.active {
+        height: 100%;
+      }
+      &.inactive {
+        height: 0%;
+      }
+    }
+  }
+  tbody tr {
+    line-height: $defaultSize;
+    &:nth-child(odd) {
+      background-color: fade-out($fcc_green, 0.8);
+    }
+    &:hover {
+      background-color: fade-out($fcc_green, 0.3);
+    }
+  }
+  td {
+    text-align: center;
+    vertical-align: middle;
+    &:nth-child(2) {
+      text-align: left;
+      min-width: 210px; /*Min-Width is needed because otherwise the width
+                          of the Camper-Column will change between AllTime and Recent*/
+      .profilePicture {
+        vertical-align: middle;
+        height: $defaultSize;
+        width: $defaultSize;
+        padding-right: $defaultSize/4;
+      }
+    }
+  }
+}

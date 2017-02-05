@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo|Lobster);
+
+/* Global Variables */
+$fcc_green: rgba(0, 100, 0, 1);
+@mixin transition($time) {
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -o-transition: $time;
+  transition: $time;
+}
+
+/* Some general Styling */
+* {
+  font-family: 'Arimo', sans-serif;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  * { /*Selects the <img> and <span> Elements which are used as links*/
+    cursor: pointer; 
+  }
+}
+
+
+@import "./404.scss";
+@import "./Layout.scss";
+@import "./table.scss";
+@import "./max-width-630.scss";

@@ -1,0 +1,42 @@
+@media screen and (max-width: 630px) {
+  #header {
+    @media screen and (max-width: 400px) { 
+      border-radius: 10px 10px 0 0;
+    }
+    a {
+      display: block;
+      text-align: center;
+    }
+    #siteHeading {
+      font-size: 3rem;
+    }
+  }
+  table {
+    $defaultSize: 30px;
+    th {
+      padding: $defaultSize/5 $defaultSize/2;
+      font-size: 80%;
+      &:nth-child(1) { /*Rank-Column*/
+        padding: $defaultSize/10; 
+      }
+    }
+    tr {
+      line-height: $defaultSize;
+    }
+    td {
+      &:nth-child(2) {
+        padding-top: $defaultSize/3;
+        text-align: center;
+        min-width: 115px;
+        font-size: 80%;
+      }
+      .profilePicture {
+        display: block;
+        margin: 0 auto;
+        padding: 0px !important; /*Important is needed because without it does not overwrite the original from above*/
+        height: $defaultSize*2;
+        width: $defaultSize*2;
+      }
+    }
+  }
+}
