@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, IndexRedirect } from "react-router";
+import { Route, IndexRoute } from "react-router";
 
 /* Import the Components */
 import Layout from "./components/Layout.js";
@@ -7,10 +7,9 @@ import LeaderboardTable from "./components/Table.js";
 import NotFoundPage from "./components/NotFoundPage.js";
 
 const routes = (
-  <Route path="/" component={Layout}>
-      <IndexRedirect to="/leaderboard" />
-      <Route path = "leaderboard" component={LeaderboardTable} />
-      <Route path ="*" component={NotFoundPage} />
+  <Route path="/Camper-Leaderboard/" component={Layout}>
+      <IndexRoute component={LeaderboardTable} />
+      <Route path ="/Camper-Leaderboard/*" component={NotFoundPage} />
   </Route>
 );
 
